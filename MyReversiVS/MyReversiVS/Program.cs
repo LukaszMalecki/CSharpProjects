@@ -16,12 +16,18 @@ namespace MyReversiVS
             /*statisticsController.ToFile("speedTest2", 50, 4, 4, new StrategyOne(), new StrategyEndgame(), new StrategyGreedy(), new StrategyGreedy(),
                 true, true, false, true);*/
 
-            IStrategyReversi stratA = new StrategyGreedy();
-            IStrategyReversi stratB = new StrategyGreedy();
+            IStrategyReversi stratA = new StrategyOne();
+            IStrategyReversi stratB = new StrategyEndgame();
 
+            statisticsController.ToFile("test_StrategyOneEndVsItself", 25, 3, 3, stratA, stratB, stratA, stratB,
+                true, true, false, false);
+            Console.WriteLine("End of Test");
+
+            /*
             statisticsController.ToFile("test_depthMiniMax_7", 1, 7, 1, stratA, stratB, stratA, stratB,
                 false, true, false, false);
             Console.WriteLine("End of Test6");
+            */
 
             /*
             statisticsController.ToFile("test_depthAlphaBeta_1", 100, 1, 1, stratA, stratB, stratA, stratB,
