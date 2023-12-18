@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca3fdf2f554cd449ba7e073f4b9ec00, type: 3}
+  m_Name: Level1_Checkpoint
+  m_EditorClassIdentifier: 
+  SceneName: Level1
+  BarriersBroken: 00000000000000000000
+  healthUpsPicked: 0000000000
+  jumpUpsPicked: 000000
+  cloverPicked: 0
+  checkpointX: -5.46
+  checkpointY: -1.5
+  defaultCameraScale: 5
+  maxHp: 5
+  jumpCount: 2
+  isNewGame: 1
