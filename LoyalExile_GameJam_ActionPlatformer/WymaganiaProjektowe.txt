@@ -1,0 +1,12 @@
+Projekt powinien obejmować następujące elementy:
+1.	Fabułę gry: wybierz świat, osadź w niej postaci, zawiąż akcję (np. potwór porwał ci ukochaną osobę), nawiąż do mechanik (np. postać gracza walczy mieczem, skacze po platformach, platformy się zapadają, NPC rzucają granatami, smok zieje ogniem). Wprowadź tę fabułę w grze, np. poprzez cutscenki (mogą być tak proste, jak w Pac-Man czy Dokney Kong) lub chociaż jako plansze startujące poziom – 2p ✓
+2.	Przygotuj interfejs: menu (wybór poziomu, głośność dźwięków, ...), HUD (ilość żyć, czas, punkty, ...), ekran pauzy (możliwość wznowienia, restartu) – 2p
+3.	Zaimplementuj gameplay (rozgrywkę): zapewnij płynność sterowania, synchronizację animacji i mechanik. Oprócz poruszania się postaci, dodaj inną mechanikę (np. siekanie mieczem, rzucanie granatami, latanie z plecakiem odrzutowym, ...) – 3p ✓
+4.	Zaprojektuj i zaimplementuj min. 2 poziomy (światy). Opcjonalnie użyj automatycznego generowania terenu/labiryntu – 2p ✓
+5.	Zaimplementuj AI (sztuczną inteligencję) w zachowaniu NPC/przeszkód (np. zombie gonią bohatera tylko, gdy się odpowiednio zbliży, w przeciwnym przypadku spacerują losowo; pułapka uruchamia się zależnie od odległości do gracza lub czasu jej aktywowania (trigger)) – 2p ✓
+6.	Lokalny multiplayer: sklonowanie postaci gracza i przypięcie mu innego sterowania; dzielenie ekranu; zagadki rozwiązywalne tylko we dwójkę – 2p
+7.	Sieciowy multiplayer – 2p
+8.	Spróbuj zbudować grę na inne platformy (smartphone, VR/AR) – 2p
+9.	Przygotuj i wykorzystaj w grze własne asety (tekstury, animacje, modele, dźwięki, muzykę) – 3p ✓
+
+Mini-projekt musi zawierać przynajmniej jeden element z następujących: przygotowanie modeli 3D, generacja terenu, sztuczna inteligencja ✓, VR. 

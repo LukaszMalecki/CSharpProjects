@@ -1,0 +1,6 @@
+Sterowanie:
+	- strzałki - ruch horyzontalny
+	- spacja - skok
+	- x - atak
+
+https://lukmal2731.itch.io/loyal-exile
