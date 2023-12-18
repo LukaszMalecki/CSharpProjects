@@ -1,0 +1,80 @@
+﻿@model IEnumerable<PO_Projekt.Models.OpiniaModel>
+
+@{
+    ViewData["Title"] = "DaneProduktuOpinie";
+}
+
+<h1>Dane Produktu</h1>
+
+<div>
+    <h4>@ViewBag.nazwaProd</h4>
+    <p class="text-danger">@ViewBag.ErrorMessage</p>
+    <p class="sukces">@ViewBag.SuccessMessage</p>
+    <hr />
+    <a asp-action="DaneProduktu" asp-route-id="@ViewBag.idProd">Opis</a> |
+    <a asp-action="DaneProduktuOpinie" asp-route-id="@ViewBag.idProd">Opinie(@ViewBag.liczbaOpinii)</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Ocena
+                </th>
+                <th>
+                    Recenzja
+                </th>
+                <th>
+
+                </th>
+                <th>
+                    Liczba polubień
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @{
+                            var punktacjaDis = item.PunktacjaDisplayFun();
+                        }
+                        @Html.Raw(punktacjaDis)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Opis)
+                    </td>
+                    <td>
+                        @{
+                            var przydatnaDis = item.przydatnaDisplayFun();
+                        }
+                        <span style="color: lawngreen; font-weight: bold">@Html.Raw(przydatnaDis)</span>
+
+                    </td>
+                    <td>
+                        @{
+                            var liczbaDis = item.liczbaPolubienDisplay();
+                        }
+                        @Html.Raw(liczbaDis)
+                    </td>
+                    <td>
+                        <form asp-action="PolubienieOpinii">
+                            <input type="hidden" name="idProd" value="@ViewBag.idProd" />
+                            <input type="hidden" name="idOpinia" value="@item.ID" />
+                            <input type="submit" value="Polub" class=@ViewData[item.ID.ToString()] />
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+</div>
+<div>
+    <a asp-action="WystawienieOpinii" asp-route-id="@ViewBag.idProd">Wystaw opinię</a> |
+    <a asp-action="DodajDoKoszyka" asp-route-id="@ViewBag.idProd">Dodaj do koszyka</a> |
+    <a asp-action="PrzegladOferty">Powrót</a>
+</div>
+

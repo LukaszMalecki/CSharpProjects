@@ -1,0 +1,71 @@
+﻿@model IEnumerable<PO_Projekt.ViewModels.ProduktKoszykViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Koszyk</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nazwa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ilosc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Miara)
+            </th>
+            <th>
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IloscWKoszyku)
+            </th>
+            <th>
+                Cena
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nazwa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ilosc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Miara.Nazwa)
+                </td>
+                <td>
+                    <a asp-action="IncreaseArticleCart" asp-route-id="@item.ID">+</a>
+                    <a asp-action="DecreaseArticleCart" asp-route-id="@item.ID">-</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IloscWKoszyku)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SumarycznaCena) zł
+                </td>
+                <td>
+                    <a asp-action="RemoveFromCart" asp-route-id="@item.ID">X</a>
+                </td>
+            </tr>
+        }
+    <td><b>Całkowita cena</b></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>@ViewBag.totalPrice zł</td>
+    <td></td>
+    </tbody>
+</table>
+
+<a asp-action="ZlozZamowienie">Złóż zamówienie</a>

@@ -1,0 +1,74 @@
+﻿@model PO_Projekt.ViewModels.DaneOsoboweModel
+
+@{
+    ViewData["Title"] = "DaneOsoboweEdit";
+}
+
+<h1>DaneOsobowe</h1>
+
+<h4>DaneUzytkownikaModel</h4>
+<p class="text-danger">@ViewBag.ErrorMessage</p>
+<p class="sukces">@ViewBag.SuccessMessage</p>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="DaneOsoboweEdit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Imie" class="control-label"></label>
+                <input asp-for="Imie" class="form-control" />
+                <span asp-validation-for="Imie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nazwisko" class="control-label"></label>
+                <input asp-for="Nazwisko" class="form-control" />
+                <span asp-validation-for="Nazwisko" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NIP" class="control-label"></label>
+                <input asp-for="NIP" class="form-control" />
+                <span asp-validation-for="NIP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ulica" class="control-label"></label>
+                <input asp-for="Ulica" class="form-control" />
+                <span asp-validation-for="Ulica" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NrDomu" class="control-label"></label>
+                <input asp-for="NrDomu" class="form-control" />
+                <span asp-validation-for="NrDomu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NrMieszkania" class="control-label"></label>
+                <input asp-for="NrMieszkania" class="form-control" />
+                <span asp-validation-for="NrMieszkania" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KodPocztowy" class="control-label"></label>
+                <input asp-for="KodPocztowy" class="form-control" />
+                <span asp-validation-for="KodPocztowy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Miasto" class="control-label"></label>
+                <input asp-for="Miasto" class="form-control" />
+                <span asp-validation-for="Miasto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Wpisz hasło</label>
+                <input type="password" name="haslo" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="PrzegladOferty">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,60 @@
+﻿
+
+<h1>Dodaj do koszyka</h1>
+
+<h4>@ViewBag.produktNazwa</h4>
+<p class="text-danger">@ViewBag.ErrorMessage</p>
+<hr />
+
+<div class="row">
+    <dl class="row">
+        <dt class="col-sm-6">
+            Cena
+        </dt>
+        <dd class="col-sm-6">
+            @ViewBag.cena<br />
+            <span style="font-weight: 300">@ViewBag.cenaZa1</span>
+        </dd>
+        <dt class="col-sm-6">
+            Wybierz ilość produktu
+        </dt>
+        <dd class="col-sm-6">
+            <span style="float:left">@ViewBag.prodLiczba </span>
+            <div style="float:left">
+                <form asp-action="DodajDoKoszyka">
+                    <input type="hidden" name="id" value="@ViewBag.prodId" />
+                    <input type="hidden" name="liczbaProduktow" value="@ViewBag.prodLiczba" />
+                    <input type="hidden" name="akcja" value="1" />
+                    <input type="submit" value="+" class="btn btn-danger" />
+                </form>
+            </div>
+            <div style="float:left">
+                <form asp-action="DodajDoKoszyka">
+                    <input type="hidden" name="id" value="@ViewBag.prodId" />
+                    <input type="hidden" name="liczbaProduktow" value="@ViewBag.prodLiczba" />
+                    <input type="hidden" name="akcja" value="-1" />
+                    <input type="submit" value="-" class="btn btn-danger" />
+                </form>
+            </div>
+        </dd>
+        <dt class="col-sm-6">
+            Suma
+        </dt>
+        <dd class="col-sm-6">
+            @ViewBag.suma
+        </dd>
+        <div style="float:left">
+            <form asp-action="DodajDoKoszyka">
+                <input type="hidden" name="id" value="@ViewBag.prodId" />
+                <input type="hidden" name="liczbaProduktow" value="@ViewBag.prodLiczba" />
+                <input type="hidden" name="akcja" value="0" />
+                <input type="submit" value="Dodaj do koszyka" class="btn btn-danger" />
+            </form>
+        </div>
+        <a asp-action="DaneProduktu" asp-route-id="@ViewBag.prodId">Anuluj</a>
+    </dl>
+
+    
+</div>
+
+

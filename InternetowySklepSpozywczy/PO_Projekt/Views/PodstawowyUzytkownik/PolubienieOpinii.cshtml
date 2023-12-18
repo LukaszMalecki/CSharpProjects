@@ -1,0 +1,30 @@
+﻿
+
+@{
+    ViewData["Title"] = "DaneProduktuOpinie";
+}
+
+<h1>Anulowanie Polubienia</h1>
+
+<div>
+    <h4>@ViewBag.nazwaProd</h4>
+    <hr />
+
+    <p>Czy na pewno chcesz anulować polubienie tej opinii?</p>
+    <div style="float:left">
+        <form asp-action="AnulowanieOpinii">
+            <input type="hidden" name="idProd" value="@ViewBag.idProd" />
+            <input type="hidden" name="idOpinia" value="@ViewBag.idOpinia" />
+            <input type="hidden" name="czyAnulowac" value="1" />
+            <input type="submit" value="Tak" class="btn btn-danger" />
+        </form>
+    </div>
+    <form asp-action="AnulowanieOpinii">
+        <input type="hidden" name="idProd" value="@ViewBag.idProd" />
+        <input type="hidden" name="idOpinia" value="@ViewBag.idOpinia" />
+        <input type="hidden" name="czyAnulowac" value="0" />
+        <input type="submit" value="Nie" class="btn btn-danger" />
+    </form>
+
+
+</div>

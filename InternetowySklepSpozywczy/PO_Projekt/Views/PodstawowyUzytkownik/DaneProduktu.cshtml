@@ -1,0 +1,77 @@
+﻿@model PO_Projekt.Models.ProduktModel
+
+@{
+    ViewData["Title"] = "DaneProduktu";
+}
+
+<h1>Dane Produktu</h1>
+
+<div>
+    <h4>@Html.DisplayFor(model => model.Nazwa)</h4>
+    <p class="text-danger">@ViewBag.ErrorMessage</p>
+    <p class="sukces">@ViewBag.SuccessMessage</p>
+    <hr />
+    <a asp-action="DaneProduktu" asp-route-id="@Model.ID">Opis</a> |
+    <a asp-action="DaneProduktuOpinie" asp-route-id="@Model.ID">Opinie(@ViewBag.liczbaOpinii)</a>
+    <div>
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Nazwa)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Nazwa)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CenaBazowa)
+            </dt>
+            <dd class="col-sm-10">
+                @{
+                    var valueCen = Model.CenaPodatekDisplayFun();
+                    var valueCen1 = Model.CenaPodatekZa1DisplayFun();
+
+                }
+                @Html.Raw(valueCen)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Opodatkowanie)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.Raw(valueCen1)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.RabatStalegoKlienta)
+            </dt>
+            <dd class="col-sm-10">
+                @{
+                    var rabatDis = Model.RabatDisplayFun();
+                }
+                @Html.Raw(rabatDis)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Ocena)
+            </dt>
+            <dd class="col-sm-10">
+                @{
+                    var ocenaDis = Model.OcenaDisplayFun();
+                }
+                @Html.Raw(ocenaDis)
+            </dd>
+    </div>
+    <div>
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Opis)
+            </dt>
+            <dd class="col-sm-10">
+                <textarea readonly name="opis" class="textArea1" cols="45" rows="10">@Html.DisplayFor(model => model.Opis)</textarea>
+            </dd>
+        </dl>
+    </div>
+</div>
+<div>
+    <a asp-action="WystawienieOpinii" asp-route-id="@Model.ID">Wystaw opinię</a> |
+    <a asp-action="DodajDoKoszyka" asp-route-id="@Model.ID">Dodaj do koszyka</a> |
+    <a asp-action="PrzegladOferty">Powrót</a>
+    
+</div>
+

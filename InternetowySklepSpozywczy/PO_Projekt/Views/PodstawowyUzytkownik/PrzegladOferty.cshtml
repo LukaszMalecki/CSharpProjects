@@ -1,0 +1,90 @@
+﻿@model IEnumerable<PO_Projekt.Models.ProduktModel>
+
+@{
+    ViewData["Title"] = "PrzegladOferty";
+}
+
+<h1>PrzegladOferty</h1>
+
+<p>
+    <a asp-action="Koszyk">Koszyk</a>
+</p>
+<form asp-action="PrzegladOferty">
+    <input type="text" name="searchString" placeholder="Szukaj..." value="@ViewBag.searched" />
+    <input type="submit" value="Wyszukaj" class="btn btn-danger" /><br />
+    <label>
+        Sortuj według:
+        <select name="sortBy">
+            <option value="nazwa">nazwa</option>
+            <option value="cena">cena</option>
+        </select>
+    </label>
+    <label>
+        Typ sortowania:
+        <select name="sortType">
+            <option value="ascending">Rosnąco</option>
+            <option value="descending">Malejąco</option>
+        </select>
+    </label>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+
+            </th>
+            <th class="naglowekAlign">
+                Nazwa produktu
+            </th>
+            <th class="naglowekAlign">
+                Cena
+            </th>
+            <th class="naglowekAlign">
+                Rabat dla stałych klientów
+            </th>
+            <th class="naglowekAlign">
+                Ocena
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+   
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                <img src=@Html.DisplayFor(modelItem => item.ImageView) class="imageSmall" />
+            </td>
+            <td class="contentTable">
+                @Html.DisplayFor(modelItem => item.Nazwa)
+            </td>
+            <td class="contentAlignCenter">
+                @{
+                    var valueCen = item.CenaPodatekDisplayFun();
+                    var valueCen1 = item.CenaPodatekZa1DisplayFun();
+
+                }
+                @Html.Raw(valueCen)<br />
+                                   <span style="font-weight: 300">@Html.Raw(valueCen1)</span>
+            </td>
+            <td class="contentAlignCenter">
+                @{ 
+                    var rabatDis = item.RabatDisplayFun();
+                }
+                <span>@Html.Raw(rabatDis)</span>
+            </td>
+            <td class="contentAlignCenter">
+                @{ 
+                    var ocenaDis = item.OcenaDisplayFun();
+                }
+                @Html.Raw(ocenaDis)
+            </td>
+            <td>
+                <a asp-action="DaneProduktu" asp-route-id="@item.ID">Szczegóły</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
