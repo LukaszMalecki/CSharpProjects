@@ -1,0 +1,185 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+.naglowekAlign {
+    text-align: center;
+}
+.contentTable {
+    font-size: 125%;
+}
+.contentAlignCenter {
+    text-align: center;
+    font-size: 125%;
+    /*line-height: 80px;
+    vertical-align: middle;
+    padding: 10% 0;*/
+    /*margin: auto;*/
+}
+.imageSmall {
+    width: 80px;
+    height: 80px;
+}
+.textArea1 {
+    resize: none;
+}
+
+.polubione {
+    -moz-border-radius: 25px;
+    -moz-box-shadow: #6E7849 0px 0px 10px;
+    -moz-transform: scale(0.4);
+    -moz-transition: all 0.5s ease;
+    -ms-transform: scale(0.4);
+    -ms-transition: all 0.5s ease;
+    -o-transform: scale(0.4);
+    -o-transition: all 0.5s ease;
+    -webkit-border-radius: 25px;
+    -webkit-box-shadow: #6E7849 0 0 10px;
+    -webkit-transform: scale(0.4);
+    -webkit-transition: all 0.5s ease;
+    background-color: #50f132;
+    background-image: -moz-linear-gradient(90deg, #5af33f, #50f132);
+    background-image: -ms-linear-gradient(90deg, #5af33f, #50f132);
+    background-image: -o-linear-gradient(90deg, #5af33f, #50f132);
+    background-image: -webkit-linear-gradient(90deg, #5af33f, #50f132);
+    background-image: linear-gradient(90deg, #5af33f, #50f132);
+    border-radius: 25px;
+    border: 3px solid #4a5032;
+    box-shadow: #6E7849 0px 0px 10px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 4em;
+    margin: auto;
+    padding: 15px;
+    text-decoration: none;
+    text-shadow: #000000 5px 5px 15px;
+    transform: scale(0.4);
+    transition: all 0.5s ease;
+}
+
+.polubione:hover {
+    padding: 15px;
+    background-color: #3de01f;
+    background-image: -moz-linear-gradient(90deg, #2dd510, #3de01f);
+    background-image: -ms-linear-gradient(90deg, #2dd510, #3de01f);
+    background-image: -o-linear-gradient(90deg, #2dd510, #3de01f);
+    background-image: -webkit-linear-gradient(90deg, #2dd510, #3de01f);
+    background-image: linear-gradient(90deg, #2dd510, #3de01f);
+}
+
+.niepolubione {
+    -moz-border-radius: 25px;
+    -moz-box-shadow: #6E7849 0px 0px 10px;
+    -moz-transform: scale(0.4);
+    -moz-transition: all 0.5s ease;
+    -ms-transform: scale(0.4);
+    -ms-transition: all 0.5s ease;
+    -o-transform: scale(0.4);
+    -o-transition: all 0.5s ease;
+    -webkit-border-radius: 25px;
+    -webkit-box-shadow: #6E7849 0 0 10px;
+    -webkit-transform: scale(0.4);
+    -webkit-transition: all 0.5s ease;
+    background-color: #9eb19a;
+    background-image: -moz-linear-gradient(90deg, #cbd9c9, #9eb19a);
+    background-image: -ms-linear-gradient(90deg, #cbd9c9, #9eb19a);
+    background-image: -o-linear-gradient(90deg, #cbd9c9, #9eb19a);
+    background-image: -webkit-linear-gradient(90deg, #cbd9c9, #9eb19a);
+    background-image: linear-gradient(90deg, #cbd9c9, #9eb19a);
+    border-radius: 25px;
+    border: 3px solid #4a5032;
+    box-shadow: #6E7849 0px 0px 10px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 4em;
+    margin: auto;
+    padding: 15px;
+    text-decoration: none;
+    text-shadow: #000000 5px 5px 15px;
+    transform: scale(0.4);
+    transition: all 0.5s ease;
+}
+
+.niepolubione:hover {
+    padding: 15px;
+    background-color: #50f132;
+    background-image: -moz-linear-gradient(90deg, #5af33f, #50f132);
+    background-image: -ms-linear-gradient(90deg, #5af33f, #50f132);
+    background-image: -o-linear-gradient(90deg, #5af33f, #50f132);
+    background-image: -webkit-linear-gradient(90deg, #5af33f, #50f132);
+    background-image: linear-gradient(90deg, #5af33f, #50f132);
+}
+
+
+.sukces{
+    color: forestgreen;
+    font-weight: 700;
+}
