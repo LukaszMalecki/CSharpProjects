@@ -1,3 +1,5 @@
+Version 1.0 build date: June 2023
+
 The folder contains some of the scripts and screenshots of the game I made for a GameJam.
 The GameJam lasted 2 weeks and I was making the game by myself so it takes about 5-10 minutes to beat.
 It also means that I had to use some shortcuts in the code, such as using goblin enemy controller for the final enemy.
