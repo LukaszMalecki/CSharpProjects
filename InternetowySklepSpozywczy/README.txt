@@ -1,4 +1,4 @@
-Version 1.0 build date: Januray 2023
+Version 1.0 build date: January 2023
 
 This project was made by me and my friend, but the code part implementation, besides setting up the project and database, is my own.
 The project was never really merged together so my code and my friend's code ended up on separate branches (mostly because I wasn't really experienced with github at the time).
