@@ -1,3 +1,5 @@
+Version 1.0 build date: May 2023
+
 The implementation of logic of reversi game credited to OttoBotCode:
 https://www.youtube.com/watch?v=SgkjZQ5vhIg
 
