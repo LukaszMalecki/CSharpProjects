@@ -1,7 +1,7 @@
 Project start: 11.01.2024
 
 New project idea for an app which allows users to have a database of recipes with all their possible allergens listed and makes it possible to filter any them.
-The idea stems from the fact that food allergies become more and more common and they don't include only dairy products, nuts, etc. They also include foods such as paprica, onion, garlic, apple, pork and the list goes on. People also go on specific diets for health/worldview reasons so the app could also include diets such as vegan, vegetarian, keto.
+The idea stems from the fact that food allergies become more and more common and they don't include only dairy products, nuts, etc. They also include foods such as bel pepper, onion, garlic, apple, pork and the list goes on. People also go on specific diets for health/worldview reasons so the app could also include diets such as vegan, vegetarian, keto.
 Therefore an app such as this needs to be as flexible in filtering and adding new filters as possible.
 
 As the first order of businness I have to collect functional and non-functional requirements for my app.
